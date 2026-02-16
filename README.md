@@ -12,7 +12,7 @@
 - 切换自动删除历史记录
 
 ## 使用说明
-1. 通过Tampermonkey安装脚本。
+1. 通过点击[Tampermonkey](https://greasyfork.org/zh-CN/scripts/502578-bilibili-%E6%8D%A2%E4%B8%80%E6%8D%A2%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95)安装脚本。
 2. 使用“回”和“行”按钮在推荐内容历史中导航。
     - 使用 “回” 回到之前的推荐
     - 使用 “行” 向最新的推荐靠近

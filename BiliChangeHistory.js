@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bilibili 换一换历史记录
 // @namespace    https://github.com/MaoShiSanKe/Bilibili_Change_History
-// @version      3.0
+// @version      3.1.0
 // @description  为Bilibili主页上的 换一换 添加回滚功能，配置导出/导入、统计、历史浏览器等
 // @author       MaoShiSanKe
 // @match        *://www.bilibili.com/*

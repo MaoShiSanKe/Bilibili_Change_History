@@ -95,8 +95,8 @@
     function extractTitlesLive() {
         const feedCards = document.getElementsByClassName('feed-card');
         return Array.from(feedCards).map(fc => {
-            const img = fc.querySelector('img[alt]');
-            return img && img.alt.trim() ? img.alt.trim().slice(0, 40) : '未知标题';
+            const title = fc.querySelector('h3')?.textContent?.trim();
+            return title || '未知标题';
         });
     }
 
@@ -104,8 +104,8 @@
         return htmlArr.map(html => {
             const div = document.createElement('div');
             div.innerHTML = html;
-            const img = div.querySelector('img[alt]');
-            return img && img.alt.trim() ? img.alt.trim().slice(0, 40) : '未知标题';
+            const title = div.querySelector('h3')?.textContent?.trim();
+            return title || '未知标题';
         });
     }
 
@@ -793,10 +793,10 @@
     bindShortcuts();
 
     // ==================== 按钮注入 ====================
-    const BTN_BACK     = `<button id="feed-roll-back-btn" class="primary-btn roll-btn biliplus-disabled" style="margin-top:10px;" title="回退到上一组推荐"><span>回</span></button>`;
-    const BTN_NEXT     = `<button id="feed-roll-next-btn" class="primary-btn roll-btn biliplus-disabled" style="margin-top:10px;" title="前进到下一组推荐"><span>行</span></button>`;
-    const BTN_CLEAR    = `<button id="clear-history-btn"  class="primary-btn roll-btn" style="margin-top:10px;" title="清除历史记录（右键点击）"><span>清</span></button>`;
-    const BTN_SETTINGS = `<button id="bch-settings-btn"   class="primary-btn roll-btn" style="margin-top:10px;position:relative;" title="换一换历史 · 设置"><span>设</span></button>`;
+    const BTN_BACK     = `<button id="feed-roll-back-btn" class="roll-btn biliplus-disabled" style="margin-top:10px;" title="回退到上一组推荐"><span>回</span></button>`;
+    const BTN_NEXT     = `<button id="feed-roll-next-btn" class="roll-btn biliplus-disabled" style="margin-top:10px;" title="前进到下一组推荐"><span>行</span></button>`;
+    const BTN_CLEAR    = `<button id="clear-history-btn"  class="roll-btn" style="margin-top:10px;" title="清除历史记录（右键点击）"><span>清</span></button>`;
+    const BTN_SETTINGS = `<button id="bch-settings-btn"   class="roll-btn" style="margin-top:10px;position:relative;" title="换一换历史 · 设置"><span>设</span></button>`;
 
     const targetNode = document.querySelector('.recommended-container_floor-aside');
     if (targetNode) {
